@@ -1,3 +1,4 @@
+// Package consolestyle provides functions to style text printed to the console.
 package consolestyle
 
 const (
@@ -12,22 +13,27 @@ const (
 	strikeResetCode    = "\x1b[29m"
 )
 
+// Bold styles the text with bold font.
 func Bold(s string) string {
 	return boldCode + s + boldResetCode
 }
 
+// Dim styles the text with dim font.
 func Dim(s string) string {
 	return dimCode + s + boldResetCode
 }
 
+// Italic styles the text with italic font.
 func Italic(s string) string {
 	return italicCode + s + italicResetCode
 }
 
+// Underline underlines the text.
 func Underline(s string) string {
 	return underlineCode + s + underlineResetCode
 }
 
+// Strike strikes through the text.
 func Strike(s string) string {
 	return strikeCode + s + strikeResetCode
 }
